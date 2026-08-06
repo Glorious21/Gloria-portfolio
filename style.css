@@ -32,6 +32,7 @@ Shade:          #8f7230           #d4c4ac               #6b4530                 
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 :root{
     --bg-dark: #1c1c1a;
@@ -48,13 +49,12 @@ html{
 
 
 body{
-    font-family: 'Poppins', 'sans-serif';
-    background-color:  #1c1c1a;
-    color: var(--text-primary) ;
-    line-height: 1.5;
-    font-weight: 400;
-    font-size: 2.0rem;
-
+    font-family:'Poppins',sans-serif;
+    background:var(--bg-dark);
+    color:var(--text-primary);
+    line-height:1.7;
+    font-size:1.8rem;
+    overflow-x:hidden;
 }
 
 
@@ -234,11 +234,14 @@ section {
 
 .cta p{
     color: var(--text-secondary);
-    max-width: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 footer {
-    text-align: center;
+    text-align: center;z
     padding: 3rem 0;
     color: var(--text-secondary);
     font-size: 1.4rem;
