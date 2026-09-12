@@ -1,128 +1,78 @@
-# Gloria Ogbodo — Full-Stack & Systems Engineer
+# Gloria Ogbodo
 
-<div align="center">
-
-[![Vite](https://img.shields.io/badge/Vite-6.x-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![React](https://img.shields.io/badge/React-19.x-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-
-**A high-performance, dark-aesthetic portfolio engineered for speed, clean typography, and interactive showcase of full-stack web applications, distributed systems, and decentralized protocols.**
-
-[Live Demo](https://fluencysui.vercel.app/) • [Report Bug](https://github.com/Glorious21/originalportfolio/issues) • [Contact](mailto:gloriaogbodo21@gmail.com)
-
-</div>
+> **Full-Stack & Systems Engineer**  
+> Lagos, Nigeria • [gloriaogbodo21@gmail.com](mailto:gloriaogbodo21@gmail.com) • [LinkedIn](https://ng.linkedin.com/in/gloria-ogbodo) • [GitHub](https://github.com/Glorious21) • [X (Twitter)](https://x.com/Glo_rious9)
 
 ---
 
-## ⚡ Overview
+## ⚡ What I Do
 
-This repository houses the personal portfolio of **Gloria Ogbodo**, a full-stack and systems engineer based in Lagos, Nigeria specializing in reactive web applications, high-throughput backend services, distributed systems, and decentralized protocols.
+I am a full-stack and systems engineer who builds end-to-end web applications, high-throughput distributed backends, and decentralized protocols. I focus on building software that is reactive and intuitive on the frontend, and deterministic, fault-tolerant, and fast on the backend.
 
-The design takes inspiration from minimalist, high-end editorial and dark-tech design systems (notably *Tyga Sparta*), fusing raw typographic contrast, tactile micro-interactions, and framed macOS-style product previews.
+### Core Areas of Expertise
 
----
-
-## 🛠️ Tech Stack & Architecture
-
-### **Client & UI**
-- **React 19** — Component-driven reactive UI architecture.
-- **Tailwind CSS & Vanilla CSS Variables** — Atomic utility styles combined with custom design tokens.
-- **Motion (`motion/react`)** — Fluid physics-based animations, continuous 3D idle floating, and entrance reveals.
-- **Typography** — Curated type system using *Kanit* (display & body) and *JetBrains Mono* (code tokens & badges).
-- **Film Grain & Shaders** — Lightweight fractal noise SVG filter for filmic depth without GPU overhead.
-
-### **Engineering Focus & Tooling**
-- **Languages:** JavaScript (ESNext), TypeScript, Move (Sui), SQL
-- **Runtimes & Frameworks:** Node.js, Express, React, Vite
-- **Databases & Caching:** PostgreSQL, MongoDB, Redis
-- **Decentralized & Protocols:** Sui Blockchain, Move Smart Contracts, Bitcoin Lightning Network, Nostr
-- **DevOps & Infrastructure:** Docker, Linux, Git, REST APIs, WebSockets
+- **Full-Stack Application Engineering:** Building responsive, production-ready web applications with React, TypeScript, and modern state architectures.
+- **High-Throughput Backend Architecture:** Designing resilient REST APIs, microservices, async message queues, and caching layers with Node.js, Express, PostgreSQL, and Redis.
+- **Distributed Systems & Data Pipelines:** Implementing fault-tolerant multi-stream aggregation pipelines with circuit breakers, auto-retries, and zero-crash fallbacks.
+- **Decentralized Protocols & Smart Contracts:** Writing Move smart contracts on the Sui blockchain, integrating Bitcoin Lightning Network micropayments, and interacting with Nostr relays.
 
 ---
 
-## 🚀 Featured Projects
+## 🛠️ Technical Stack
 
-| Project | Role | Description | Links |
-| :--- | :--- | :--- | :--- |
-| **Fluency** | Creator & Architect | Interactive Sui & Move gamified education platform with concept explorers, compiler IDE, and on-chain verifiable credentials. | [Live](https://fluencysui.vercel.app/) • [GitHub](https://github.com/Glorious21/fluency) |
-| **Ajotribe** | Backend Developer | AI-powered fintech protocol digitizing traditional community savings with Bitcoin Lightning micropayments & Nostr relays. | [GitHub](https://github.com/Glorious21/Ajotribe1) |
-| **Gigstream** | Backend Systems | Hackathon-winning high-throughput worker dispatch engine and resilient API integrations built under sprint deadlines. | [GitHub](https://github.com/Arewa100/Gigstream) |
-| **Voting Platform** | Backend Developer | Tamper-resistant academic election infrastructure with double-voting prevention and real-time ballot tallying. | [GitHub](https://github.com/socscuniben/voting-platform) |
-| **Data Aggregator** | Systems Architect | Unified real-time multi-stream data pipeline with circuit breakers, async retries, and zero-crash fallbacks. | [GitHub](https://github.com/Glorious21/Real-Time-Data-Aggregation-Service) |
-
----
-
-## ✨ Key Design Features
-
-1. **Kinetic Hero & Floating Character**
-   - Centered chrome display typography (`HI, I'M GLORIA`).
-   - High-fidelity 3D character portrait with continuous vertical floating physics.
-2. **Octagonal Navigation Header**
-   - Centered octagonal SVG toggle button anchored to a horizontal ruler bar.
-   - Smooth 22.5° polygon rotation on hover with animated hamburger-to-close cross lines.
-   - Full-screen glassmorphism overlay navigation menu.
-3. **Continuous Motion Marquee (Toolkit)**
-   - Dual-row infinite marquee flowing in opposing directions.
-   - Monochrome SVG vector icons for tools across the full-stack ecosystem.
-4. **Collision-Free Browser Framed Cards**
-   - Clean macOS-inspired browser window frames with traffic light controls.
-   - Structured editorial metadata with non-overlapping titles, tags, and action buttons.
-5. **Word-by-Word Scroll Reveal**
-   - IntersectionObserver-powered staggered word fade in the About narrative.
-   - Real system metrics counter (`5+ Production Systems`, `1st Hackathon Winner`, `1,500 Req/s Throughput`).
-6. **Direct Action Contact**
-   - Direct Gmail compose launcher.
-   - One-click interactive copy-to-clipboard email pill with visual confirmation.
+- **Languages:** JavaScript (ESNext), TypeScript, Move, SQL, HTML5, CSS3
+- **Frontend:** React, Tailwind CSS, Responsive UI Design, State Management
+- **Backend:** Node.js, Express.js, RESTful APIs, WebSockets, Async Queues
+- **Databases & Storage:** PostgreSQL, MongoDB, Redis
+- **Blockchain & Protocols:** Sui Blockchain (Move), Bitcoin Lightning Network, Nostr
+- **DevOps & Tools:** Docker, Linux, Git, GitHub, Postman, CI/CD
 
 ---
 
-## 💻 Getting Started Locally
+## 🚀 Selected Projects
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v18.0.0 or higher recommended)
-- [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/)
+### 1. [Fluency](https://fluencysui.vercel.app/)
+**Interactive Sui & Move Gamified Learning Platform**  
+*Creator & Full-Stack Architect* • [Live Demo](https://fluencysui.vercel.app/) • [Source Code](https://github.com/Glorious21/fluency)
+- Arcade-style Web3 education platform teaching Sui blockchain architecture and Move smart contracts.
+- Built scored code challenge engines, interactive concept explorers, compiler IDE, and on-chain verifiable credentials.
+- **Stack:** React, Move, Sui Blockchain, Vite.
 
-### Installation
+### 2. [Ajotribe](https://github.com/Glorious21/Ajotribe1)
+**Fintech Protocol via Lightning Network & Nostr**  
+*Backend Developer* • [Source Code](https://github.com/Glorious21/Ajotribe1)
+- Digitized traditional community savings circles (esusu/ajo) using Bitcoin Lightning micropayments and Nostr relays.
+- Implemented automated contribution schedules, instant settlements, and fraud-resistant ledger tracking.
+- **Stack:** Node.js, Lightning Network, Nostr, PostgreSQL.
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Glorious21/originalportfolio.git
-   cd originalportfolio
-   ```
+### 3. [Gigstream](https://github.com/Arewa100/Gigstream)
+**Hackathon Winner — High-Throughput Gig Economy Engine**  
+*Backend Systems Engineer* • [Source Code](https://github.com/Arewa100/Gigstream)
+- High-concurrency backend services and resilient worker dispatch systems built under sprint deadlines.
+- Awarded 1st place for system reliability, data flow resilience, and async queue orchestration.
+- **Stack:** Node.js, Express, MongoDB, Async Queues.
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+### 4. [Voting Platform](https://github.com/socscuniben/voting-platform)
+**Tamper-Resistant Academic Voting Infrastructure**  
+*Backend Developer* • [Source Code](https://github.com/socscuniben/voting-platform)
+- Core backend logic for university elections enforcing ballot integrity and double-voting prevention.
+- High-concurrency authentication and real-time ballot tallying APIs with verifiable audit logs.
+- **Stack:** Node.js, REST APIs, Security, Audit Logs.
 
-3. **Start the local development server:**
-   ```bash
-   npm run dev
-   ```
-   Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-4. **Build for production:**
-   ```bash
-   npm run build
-   ```
-
-5. **Preview the production bundle:**
-   ```bash
-   npm run preview
-   ```
+### 5. [Real-Time Data Aggregation Service](https://github.com/Glorious21/Real-Time-Data-Aggregation-Service)
+**Fault-Tolerant Multi-Stream Data Pipeline**  
+*Systems Architect* • [Source Code](https://github.com/Glorious21/Real-Time-Data-Aggregation-Service)
+- Unified aggregation engine combining weather, news, and financial streaming APIs.
+- Implemented circuit breaker patterns, exponential backoff retries, and high-performance in-memory caching.
+- **Stack:** Node.js, Circuit Breakers, API Caching.
 
 ---
 
-## 📬 Connect
+## 📬 Contact & Collaboration
+
+I am open to full-stack engineering roles, distributed systems challenges, and protocol development.
 
 - **Email:** [gloriaogbodo21@gmail.com](mailto:gloriaogbodo21@gmail.com)
-- **GitHub:** [@Glorious21](https://github.com/Glorious21)
-- **LinkedIn:** [gloria-ogbodo](https://ng.linkedin.com/in/gloria-ogbodo)
+- **LinkedIn:** [linkedin.com/in/gloria-ogbodo](https://ng.linkedin.com/in/gloria-ogbodo)
+- **GitHub:** [github.com/Glorious21](https://github.com/Glorious21)
 - **X (Twitter):** [@Glo_rious9](https://x.com/Glo_rious9)
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
