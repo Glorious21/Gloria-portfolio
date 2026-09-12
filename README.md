@@ -1,7 +1,7 @@
 # Gloria Ogbodo
 
 > **Full-Stack & Systems Engineer**  
-> Lagos, Nigeria • [gloriaogbodo21@gmail.com](mailto:gloriaogbodo21@gmail.com) • [LinkedIn](https://ng.linkedin.com/in/gloria-ogbodo) • [GitHub](https://github.com/Glorious21) • [X (Twitter)](https://x.com/Glo_rious9)
+> Lagos, Nigeria • [gloriaogbodo21@gmail.com](mailto:gloriaogbodo21@gmail.com) • [+234 903 597 7820](tel:09035977820) • [LinkedIn](https://ng.linkedin.com/in/gloria-ogbodo) • [GitHub](https://github.com/Glorious21) • [X (Twitter)](https://x.com/Glo_rious9)
 
 ---
 
@@ -73,6 +73,7 @@ I am a full-stack and systems engineer who builds end-to-end web applications, h
 I am open to full-stack engineering roles, distributed systems challenges, and protocol development.
 
 - **Email:** [gloriaogbodo21@gmail.com](mailto:gloriaogbodo21@gmail.com)
+- **Phone:** [+234 903 597 7820](tel:09035977820) / 09035977820
 - **LinkedIn:** [linkedin.com/in/gloria-ogbodo](https://ng.linkedin.com/in/gloria-ogbodo)
 - **GitHub:** [github.com/Glorious21](https://github.com/Glorious21)
 - **X (Twitter):** [@Glo_rious9](https://x.com/Glo_rious9)

@@ -3,9 +3,12 @@ import { GithubIcon, LinkedinIcon, XIcon } from './SocialIcons';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
+  const [phoneCopied, setPhoneCopied] = useState(false);
   const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
   const emailAddress = 'gloriaogbodo21@gmail.com';
+  const phoneNumber = '09035977820';
+  const phoneDisplay = '+234 903 597 7820';
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,6 +28,12 @@ export default function Contact() {
     navigator.clipboard.writeText(emailAddress);
     setCopied(true);
     setTimeout(() => setCopied(false), 3000);
+  };
+
+  const handlePhoneCopy = () => {
+    navigator.clipboard.writeText(phoneNumber);
+    setPhoneCopied(true);
+    setTimeout(() => setPhoneCopied(false), 3000);
   };
 
   return (
@@ -69,7 +78,7 @@ export default function Contact() {
 
         {/* CTA Buttons */}
         <div
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          className="flex flex-wrap items-center justify-center gap-3.5 mb-16"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? 'translateY(0)' : 'translateY(15px)',
@@ -97,6 +106,7 @@ export default function Contact() {
           <button
             onClick={handleCopy}
             className="btn-cta"
+            title="Copy email address"
           >
             {copied ? (
               <>
@@ -115,6 +125,17 @@ export default function Contact() {
               </>
             )}
           </button>
+
+          <a
+            href={`tel:${phoneNumber}`}
+            className="btn-cta bg-ink/[0.06] hover:bg-ink/[0.12]"
+            title="Call 09035977820"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+            <span className="font-mono text-xs">{phoneDisplay}</span>
+          </a>
         </div>
 
         {/* Social links */}

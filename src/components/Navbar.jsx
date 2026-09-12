@@ -149,6 +149,12 @@ export default function Navbar() {
             >
               gloriaogbodo21@gmail.com
             </a>
+            <a
+              href="tel:09035977820"
+              className="eyebrow text-ink/60 transition-opacity hover:opacity-70"
+            >
+              +234 903 597 7820
+            </a>
             <span className="eyebrow text-ink/40">Lagos, Nigeria</span>
           </div>
         </nav>
