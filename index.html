@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gloria Ogbodo — Full-Stack & Systems Engineer</title>
-  <meta name="description" content="Gloria Ogbodo — Full-Stack & Systems Engineer crafting reactive web applications, scalable backends, distributed systems, and decentralized protocols with React, TypeScript, Node.js, and Move on Sui." />
-  <meta name="author" content="Gloria Ogbodo" />
-  <meta name="theme-color" content="#0c0c0c" />
-  
+  <title>Gloria Modupe Ogbodo — Full-Stack Web2 &amp; Web3 Developer</title>
+  <meta name="description" content="Gloria Modupe Ogbodo — Full-Stack Web2 &amp; Web3 developer building end-to-end applications, scalable backends, MERN dashboards, and decentralized protocols with React, Node.js, MongoDB, and Move on Sui." />
+  <meta name="author" content="Gloria Modupe Ogbodo" />
+
   <!-- OpenGraph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Gloria Ogbodo — Full-Stack & Systems Engineer" />
-  <meta property="og:description" content="Full-Stack & Systems Engineer building reactive web applications, scalable backends, distributed systems, and decentralized protocols." />
+  <meta property="og:title" content="Gloria Modupe Ogbodo — Full-Stack Web2 &amp; Web3 Developer" />
+  <meta property="og:description" content="Full-Stack Web2 &amp; Web3 developer building end-to-end applications from database architecture to accessible UIs." />
   <meta property="og:image" content="/gloria-hero.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@Glo_rious9" />
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230c0c0c'/><text x='50%' y='55%' text-anchor='middle' fill='%23e8e4de' font-family='sans-serif' font-weight='bold' font-size='42' dy='.3em'>GO</text></svg>" />
 
@@ -23,8 +22,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!--
+    Theme Init — runs SYNCHRONOUSLY before any rendering.
+    Default is LIGHT. Toggle saves preference to localStorage.
+  -->
+  <script>
+    (function () {
+      var saved = '';
+      try { saved = localStorage.getItem('theme') || ''; } catch (e) {}
+      if (saved === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        // 'light' or no preference → light mode (default)
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+
 </head>
-<body class="bg-[#0c0c0c] text-[#e8e4de] antialiased">
+<body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>

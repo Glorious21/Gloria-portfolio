@@ -3,7 +3,6 @@ import { motion } from 'motion/react';
 
 export default function Hero() {
   const [visible, setVisible] = useState(false);
-  const sectionRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 100);
@@ -12,16 +11,16 @@ export default function Hero() {
 
   return (
     <section
-      ref={sectionRef}
-      className="relative flex h-screen min-h-[640px] flex-col bg-background"
+      className="relative flex h-screen min-h-[640px] flex-col"
+      style={{ background: 'var(--bg)' }}
     >
-      {/* ── Hero Headline (centered top) ── */}
+      {/* Headline */}
       <div className="overflow-hidden">
         <div
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? 'translate3d(0,0,0)' : 'translate3d(0,40px,0)',
-            transition: 'opacity 700ms cubic-bezier(0.16,1,0.32,1) 0ms, transform 700ms cubic-bezier(0.16,1,0.32,1) 0ms',
+            transition: 'opacity 700ms cubic-bezier(0.16,1,0.32,1), transform 700ms cubic-bezier(0.16,1,0.32,1)',
           }}
         >
           <h1 className="display-hero chrome-text mt-24 w-full text-center sm:mt-24 md:mt-28">
@@ -30,7 +29,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* ── Bottom bar: bio left, CTA right ── */}
+      {/* Bottom bar */}
       <div className="mt-auto flex items-end justify-between gap-6 px-6 pb-7 sm:pb-8 md:px-10 md:pb-10">
         <div
           style={{
@@ -39,8 +38,8 @@ export default function Hero() {
             transition: 'opacity 700ms cubic-bezier(0.16,1,0.32,1) 120ms, transform 700ms cubic-bezier(0.16,1,0.32,1) 120ms',
           }}
         >
-          <p className="body-md max-w-[160px] text-ink sm:max-w-[240px] md:max-w-[320px]">
-            A versatile full-stack & systems engineer crafting modern web experiences, distributed backends, and decentralized protocols — from Lagos, Nigeria.
+          <p className="body-md max-w-[160px] sm:max-w-[240px] md:max-w-[340px]">
+            Full-Stack Web2 &amp; Web3 developer building end-to-end applications from database architecture to accessible UIs — from Lagos / Ogun State, Nigeria.
           </p>
         </div>
         <div
@@ -50,13 +49,11 @@ export default function Hero() {
             transition: 'opacity 700ms cubic-bezier(0.16,1,0.32,1) 200ms, transform 700ms cubic-bezier(0.16,1,0.32,1) 200ms',
           }}
         >
-          <a href="#contact" className="btn-cta">
-            Contact Me
-          </a>
+          <a href="#contact" className="btn-cta">Contact Me</a>
         </div>
       </div>
 
-      {/* ── 3D Character (centered, anchored to bottom) ── */}
+      {/* 3D Character */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 z-10 w-[270px] -translate-x-1/2 -translate-y-1/2 sm:bottom-0 sm:top-auto sm:w-[280px] sm:translate-y-0 md:w-[360px] lg:w-[430px]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -69,7 +66,7 @@ export default function Hero() {
           >
             <img
               src="/gloria-hero.png"
-              alt="3D character portrait of Gloria Ogbodo"
+              alt="3D character portrait of Gloria Modupe Ogbodo"
               width="860"
               height="1152"
               draggable={false}

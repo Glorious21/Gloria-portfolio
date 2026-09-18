@@ -4,54 +4,90 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ═══════════════════════════════════════════════
+   LIGHT MODE (default) — white bg, black text
+═══════════════════════════════════════════════ */
+:root {
+  --bg:         #ffffff;
+  --bg-subtle:  #f5f5f5;
+  --text:       #0a0a0a;
+  --text-muted: #555555;
+  --text-faint: #888888;
+  --border:     #d4d4d4;
+  --border-hover: #a0a0a0;
+  --card-bg:    #f8f8f8;
+  --card-bg-hover: #f0f0f0;
+
+  /* keep these for Tailwind color utilities that still ref them */
+  --color-background-rgb: 255 255 255;
+  --color-ink-rgb:        0 0 0;
+
+  --chrome-gradient: linear-gradient(180deg, #000 0%, #333 30%, #111 50%, #444 70%, #000 100%);
+  --overlay-bg: rgba(255,255,255,0.97);
+  --scrollbar-track: #f0f0f0;
+  --scrollbar-thumb: #c0c0c0;
+  --selection-bg: rgba(0,0,0,0.12);
+  --selection-color: #000;
+}
+
+/* ═══════════════════════════════════════════════
+   DARK MODE — near-black bg, warm white text
+═══════════════════════════════════════════════ */
+.dark {
+  --bg:         #0d0d0d;
+  --bg-subtle:  #161616;
+  --text:       #e8e4de;
+  --text-muted: #a0a09a;
+  --text-faint: #666660;
+  --border:     #2a2a2a;
+  --border-hover: #4a4a4a;
+  --card-bg:    #151515;
+  --card-bg-hover: #1c1c1c;
+
+  --color-background-rgb: 13 13 13;
+  --color-ink-rgb:        232 228 222;
+
+  --chrome-gradient: linear-gradient(180deg, #e8e4de 0%, #b0aca6 30%, #f0ece6 50%, #a0a09a 70%, #e8e4de 100%);
+  --overlay-bg: rgba(13,13,13,0.97);
+  --scrollbar-track: #111;
+  --scrollbar-thumb: #333;
+  --selection-bg: rgba(232,228,222,0.15);
+  --selection-color: #fff;
+}
+
+/* ═══════════════════════════════════════════════
+   BASE STYLES
+═══════════════════════════════════════════════ */
 @layer base {
   html {
     scroll-behavior: smooth;
-    color-scheme: dark;
   }
 
+  html.dark { color-scheme: dark; }
+  html:not(.dark) { color-scheme: light; }
+
   body {
-    @apply bg-background text-ink font-kanit antialiased;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Kanit', sans-serif;
+    -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    transition: background-color 300ms ease, color 300ms ease;
   }
 
   ::selection {
-    background: rgba(232, 228, 222, 0.18);
-    color: #fff;
+    background: var(--selection-bg);
+    color: var(--selection-color);
   }
 
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #0c0c0c;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: rgba(232, 228, 222, 0.15);
-    border-radius: 9999px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(232, 228, 222, 0.3);
-  }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+  ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 9999px; }
 }
 
-/* ─── Chrome / Metallic Text Effect ─── */
-.chrome-text {
-  color: transparent;
-  background: linear-gradient(
-    180deg,
-    #e8e4de 0%,
-    #b8b4ae 35%,
-    #f0ece6 50%,
-    #a8a49e 65%,
-    #e8e4de 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ─── Display Typography ─── */
+/* ═══════════════════════════════════════════════
+   TYPOGRAPHY
+═══════════════════════════════════════════════ */
 .display-hero {
   font-family: 'Kanit', sans-serif;
   font-weight: 900;
@@ -59,6 +95,7 @@
   line-height: 0.9;
   letter-spacing: -0.02em;
   text-transform: uppercase;
+  color: var(--text);
 }
 
 .display-lg {
@@ -67,6 +104,7 @@
   font-size: clamp(2.5rem, 6vw, 5rem);
   line-height: 1;
   letter-spacing: -0.015em;
+  color: var(--text);
 }
 
 .display-md {
@@ -75,23 +113,24 @@
   font-size: clamp(1.5rem, 4vw, 3rem);
   line-height: 1.1;
   letter-spacing: -0.01em;
+  color: var(--text);
 }
 
-/* ─── Eyebrow Label ─── */
 .eyebrow {
   font-family: 'Kanit', sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  color: var(--text-muted);
 }
 
-/* ─── Body Typography ─── */
 .body-md {
   font-family: 'Kanit', sans-serif;
   font-weight: 300;
   font-size: clamp(0.875rem, 1.5vw, 1.125rem);
   line-height: 1.6;
+  color: var(--text);
 }
 
 .body-sm {
@@ -99,22 +138,125 @@
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.6;
+  color: var(--text-muted);
 }
 
-/* ─── CTA Button ─── */
+/* ═══════════════════════════════════════════════
+   CHROME / METALLIC TEXT
+═══════════════════════════════════════════════ */
+.chrome-text {
+  color: transparent;
+  background: var(--chrome-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ═══════════════════════════════════════════════
+   CTA BUTTON
+═══════════════════════════════════════════════ */
 .btn-cta {
-  @apply inline-flex items-center gap-2 rounded-full border border-ink/25 px-6 py-3 text-sm font-medium text-ink transition-all duration-300;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  border: 1.5px solid var(--border);
+  padding: 0.75rem 1.5rem;
   font-family: 'Kanit', sans-serif;
+  font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  color: var(--text);
+  background: transparent;
+  transition: background 250ms ease, border-color 250ms ease;
+  cursor: pointer;
+  text-decoration: none;
 }
 .btn-cta:hover {
-  background: rgba(232, 228, 222, 0.08);
-  border-color: rgba(232, 228, 222, 0.5);
+  background: var(--card-bg-hover);
+  border-color: var(--border-hover);
 }
 
-/* ─── Marquee ─── */
+/* ═══════════════════════════════════════════════
+   CARD
+═══════════════════════════════════════════════ */
+.card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  border-radius: 1.25rem;
+  transition: border-color 300ms ease, background 300ms ease;
+}
+.card:hover {
+  background: var(--card-bg-hover);
+  border-color: var(--border-hover);
+}
+
+/* ═══════════════════════════════════════════════
+   SECTION DIVIDER
+═══════════════════════════════════════════════ */
+.section-border {
+  border-top: 1.5px solid var(--border);
+}
+
+/* ═══════════════════════════════════════════════
+   BADGE UTILITIES
+═══════════════════════════════════════════════ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.2rem 0.75rem;
+  border-radius: 9999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border: 1.5px solid var(--border);
+  color: var(--text-muted);
+  background: var(--card-bg);
+}
+
+.badge-green {
+  color: #16a34a;
+  border-color: rgba(22, 163, 74, 0.35);
+  background: rgba(22, 163, 74, 0.08);
+}
+.dark .badge-green {
+  color: #4ade80;
+  border-color: rgba(74, 222, 128, 0.30);
+  background: rgba(74, 222, 128, 0.08);
+}
+
+.badge-blue {
+  color: #1d4ed8;
+  border-color: rgba(29, 78, 216, 0.30);
+  background: rgba(29, 78, 216, 0.07);
+}
+.dark .badge-blue {
+  color: #60a5fa;
+  border-color: rgba(96, 165, 250, 0.30);
+  background: rgba(96, 165, 250, 0.08);
+}
+
+/* ═══════════════════════════════════════════════
+   TAG PILL
+═══════════════════════════════════════════════ */
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--bg-subtle);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ═══════════════════════════════════════════════
+   MARQUEE
+═══════════════════════════════════════════════ */
 .marquee-mask {
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
@@ -124,63 +266,74 @@
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee var(--marquee-duration, 42s) linear infinite;
+  animation: marquee 42s linear infinite;
 }
 
 .marquee-track-reverse {
   display: flex;
   width: max-content;
-  animation: marquee-reverse var(--marquee-duration, 42s) linear infinite;
+  animation: marquee-reverse 38s linear infinite;
 }
 
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(calc(-100% / 3)); }
 }
-
 @keyframes marquee-reverse {
   0% { transform: translateX(calc(-100% / 3)); }
   100% { transform: translateX(0); }
 }
 
-/* ─── Horizontal Rule ─── */
-.hr-ink {
-  border: none;
-  height: 1px;
-  background: rgba(232, 228, 222, 0.15);
-}
-
-/* ─── Scroll Reveal Animation ─── */
+/* ═══════════════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════════════ */
 .reveal-up {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 700ms cubic-bezier(0.16, 1, 0.32, 1),
               transform 700ms cubic-bezier(0.16, 1, 0.32, 1);
 }
-
 .reveal-up.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ─── Octagon Nav Button ─── */
+.reveal-word {
+  display: inline-block;
+  margin-right: 0.3em;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+/* ═══════════════════════════════════════════════
+   NAV LABEL
+═══════════════════════════════════════════════ */
 .nav-label {
   font-family: 'Kanit', sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  color: var(--text);
 }
 
-/* ─── Film Grain ─── */
+/* ═══════════════════════════════════════════════
+   FILM GRAIN (very subtle)
+═══════════════════════════════════════════════ */
 .film-grain {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
   pointer-events: none;
   z-index: 99;
-  opacity: 0.022;
+  opacity: 0.025;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
+/* ─── Utility Overrides ─── */
+/* Force all Tailwind text‑ink utilities to use the base text color */
+[class*='text-ink/'] { color: var(--text) !important; }
+/* Force all background‑ink utilities to use the base background */
+[class*='bg-ink/'] { background-color: var(--bg) !important; }
+/* Force all border‑ink utilities to use the base border color */
+[class*='border-ink/'] { border-color: var(--border) !important; }

@@ -8,9 +8,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: '#0c0c0c',
-        ink: '#e8e4de',
-        muted: 'rgba(232, 228, 222, 0.45)',
+        background: 'rgb(var(--color-background-rgb) / <alpha-value>)',
+        ink: 'rgb(var(--color-ink-rgb) / <alpha-value>)',
+        muted: 'rgb(var(--color-muted-rgb) / <alpha-value>)',
       },
       fontFamily: {
         kanit: ['"Kanit"', 'sans-serif'],
