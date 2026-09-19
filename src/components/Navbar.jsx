@@ -93,8 +93,8 @@ export default function Navbar() {
             <span className="nav-label">{menuOpen ? 'Close' : 'Menu'}</span>
           </button>
 
-          {/* Theme Toggle */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2">
+          {/* Theme Toggle — hidden on mobile (available inside menu overlay) */}
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block">
             <ThemeToggle />
           </div>
         </div>
