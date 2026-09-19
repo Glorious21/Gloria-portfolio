@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { GithubIcon, LinkedinIcon, XIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon, XIcon, WhatsAppIcon } from './SocialIcons';
 
 export default function Contact() {
-  const [copied, setCopied] = useState(false);
-  const [phoneCopied, setPhoneCopied] = useState(false);
   const sectionRef = useRef(null);
   const [visible, setVisible] = useState(false);
   const emailAddress = 'glorious27@gmail.com';
@@ -20,18 +18,6 @@ export default function Contact() {
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(emailAddress);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 3000);
-  };
-
-  const handlePhoneCopy = () => {
-    navigator.clipboard.writeText(phoneNumber);
-    setPhoneCopied(true);
-    setTimeout(() => setPhoneCopied(false), 3000);
-  };
 
   const fadeIn = (delay = 0) => ({
     opacity: visible ? 1 : 0,
@@ -70,26 +56,18 @@ export default function Contact() {
             Say Hello
           </a>
 
-          <button onClick={handleCopy} className="btn-cta" title="Copy email address">
-            {copied ? (
-              <>
-                <svg className="w-4 h-4" style={{ color: '#16a34a' }} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span style={{ color: '#16a34a' }}>Copied!</span>
-              </>
-            ) : (
-              <>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                  <rect x="9" y="9" width="13" height="13" rx="2" />
-                  <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
-                </svg>
-                <span className="font-mono text-xs">{emailAddress}</span>
-              </>
-            )}
-          </button>
+          <a
+            href="https://wa.me/2349035977820"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-cta"
+            title="Chat on WhatsApp"
+          >
+            <WhatsAppIcon className="w-4 h-4" />
+            <span>WhatsApp</span>
+          </a>
 
-          <a href={`tel:${phoneNumber}`} className="btn-cta" title="Call 09035977820">
+          <a href={`tel:${phoneNumber}`} className="btn-cta" title="Call +234 903 597 7820">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
             </svg>
