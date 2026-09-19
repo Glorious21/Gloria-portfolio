@@ -11,7 +11,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative flex h-screen min-h-[640px] flex-col"
+      className="relative flex h-[100dvh] min-h-[600px] sm:min-h-[640px] flex-col overflow-hidden"
       style={{ background: 'var(--bg)' }}
     >
       {/* Headline */}
@@ -23,14 +23,14 @@ export default function Hero() {
             transition: 'opacity 700ms cubic-bezier(0.16,1,0.32,1), transform 700ms cubic-bezier(0.16,1,0.32,1)',
           }}
         >
-          <h1 className="display-hero chrome-text mt-24 w-full text-center sm:mt-24 md:mt-28">
+          <h1 className="display-hero chrome-text mt-20 w-full text-center sm:mt-24 md:mt-28">
             Hi, I'm Gloria
           </h1>
         </div>
       </div>
 
       {/* Bottom bar */}
-      <div className="mt-auto flex items-end justify-between gap-6 px-6 pb-7 sm:pb-8 md:px-10 md:pb-10">
+      <div className="relative z-20 mt-auto flex items-end justify-between gap-4 px-6 pb-6 sm:gap-6 sm:pb-8 md:px-10 md:pb-10">
         <div
           style={{
             opacity: visible ? 1 : 0,
@@ -38,7 +38,7 @@ export default function Hero() {
             transition: 'opacity 700ms cubic-bezier(0.16,1,0.32,1) 120ms, transform 700ms cubic-bezier(0.16,1,0.32,1) 120ms',
           }}
         >
-          <p className="body-md max-w-[160px] sm:max-w-[240px] md:max-w-[340px]">
+          <p className="body-sm sm:body-md max-w-[160px] sm:max-w-[240px] md:max-w-[340px]">
             Full-Stack Web2 &amp; Web3 developer building end-to-end applications from database architecture to accessible UIs — from Lagos / Ogun State, Nigeria.
           </p>
         </div>
@@ -49,12 +49,12 @@ export default function Hero() {
             transition: 'opacity 700ms cubic-bezier(0.16,1,0.32,1) 200ms, transform 700ms cubic-bezier(0.16,1,0.32,1) 200ms',
           }}
         >
-          <a href="#contact" className="btn-cta">Contact Me</a>
+          <a href="#contact" className="btn-cta text-xs sm:text-sm shrink-0">Contact Me</a>
         </div>
       </div>
 
       {/* 3D Character */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 z-10 w-[270px] -translate-x-1/2 -translate-y-1/2 sm:bottom-0 sm:top-auto sm:w-[280px] sm:translate-y-0 md:w-[360px] lg:w-[430px]">
+      <div className="pointer-events-none absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 w-[200px] sm:top-auto sm:bottom-0 sm:translate-y-0 sm:w-[280px] md:w-[360px] lg:w-[430px] z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -71,7 +71,7 @@ export default function Hero() {
               height="1152"
               draggable={false}
               loading="eager"
-              className="select-none w-full"
+              className="hero-avatar-mask select-none w-full"
             />
           </motion.div>
         </motion.div>

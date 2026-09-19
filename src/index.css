@@ -141,6 +141,13 @@
   color: var(--text-muted);
 }
 
+@media (max-width: 639px) {
+  .hero-avatar-mask {
+    -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+  }
+}
+
 /* ═══════════════════════════════════════════════
    CHROME / METALLIC TEXT
 ═══════════════════════════════════════════════ */
